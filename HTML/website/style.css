@@ -137,3 +137,13 @@ nav ul li a:hover::after{
     width: 50%;
 
 }
+
+.tab-contents ul il{
+    list-style: none;
+    margin: 10px 0;
+}
+
+.tab-contents ul li span{
+    color: #1172f1;
+    font-size: 14px;
+}
