@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jayden's super cool website</title>
     <link rel="stylesheet" href="style.css">
-    <script src="https://kit.fontawesome.com/359ccc3c21.js" crossorigin="anonymous"></script>
+    <!-- fontawesome icon libary -->
+    <script src="https://kit.fontawesome.com/359ccc3c21.js" crossorigin="anonymous"></script> 
 </head>
 <body>
 <!------------------ Home page / Header section ------------------------->
@@ -13,12 +14,15 @@
     <div class="container">
         <nav>
             <img src="" alt="logo">
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Portfolio</a></li>
-                <li><a href="#">Contact</a></li>
+            <ul id="sidemenu">
+                <li><a href="#header">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <i class="fa-solid fa-rectangle-xmark" onclick="closemenu()"></i>
             </ul>
+            <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+            
         </nav>
         <div>
             <div class="header-text">
@@ -119,25 +123,30 @@
                     <a href="https://www.instagram.com/jjayden_g/"><i class="fa-brands fa-square-instagram"></i></a>
                     <a href="https://open.spotify.com/user/31m74am7f5ezygwchg33z4usa2cu?si=6d7df5d4727a4d30"><i class="fa-brands fa-spotify"></i></a>
                 </div>
+                <!-- if you want to do downloadable input resume file and add download before class -->
                 <a href="https://drive.google.com/file/d/14N5aiAXqwhYih4DEmaAG1r8HGp0uHXwm/view?usp=sharing" class="btn btn2">View Resume</a>
             </div>
             <div class="contact-right"> 
-                <form>
+                <form name="submit-to-google-sheet">
                     <input type="text" name="Name" placeholder="Your Name" required>
-                    <input type="email" name="email" placeholder="Your Email" required>
+                    <input type="email" name="Email" placeholder="Your Email" required>
                     <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
-                    <button type="submit">Submit</button>
+                    <button type="submit" class="btn btn2">Submit</button>
                 </form>
+                <span id="msg"></span>
 
             </div>
         </div>
+    </div>
+    <div class="footer">
+        <p>Website designed and devloped by Jayden Graneta <i class="fa-solid fa-cat"></i> </p>
     </div>
 </div>
 
 
 <!------------------ Script Section ------------------------->
 
-<!--- about me tab script ---->
+<!-- About me tab script -->
 <script>
     var tablinks = document.getElementsByClassName("tab-links");
     var tabcontents = document.getElementsByClassName("tab-contents");
@@ -153,6 +162,40 @@
     }
 
 </script>
+
+<!-- small device menu side bar close and open -->
+<script>
+    var sidemenu = document.getElementById('sidemenu');
+    
+    function openmenu(){
+        sidemenu.style.right = "0";
+    }
+
+    function closemenu(){
+        sidemenu.style.right = "-200px";
+    }
+
+</script>
+
+<!-- Contact form sending information to google sheet -->
+<script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbwBDI8ZcV1tr4C8uO7v4RcZI_e_2dsNv5XVNM6Fg1nQZw98a8Y6fJDw7511Kxhz9edq/exec'
+    const form = document.forms['submit-to-google-sheet']
+    const msg = document.getElementById("msg")
+  
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => {
+            msg.innerHTML = "Message sent successfully!"
+            setTimeout(function(){
+                msg.innerHTML = ""
+            }, 5000)
+            form.reset()
+        })
+        .catch(error => console.error('Error!', error.message))
+    })
+  </script>
     
 </body>
 </html>
