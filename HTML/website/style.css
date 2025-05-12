@@ -24,6 +24,9 @@ body{
 
 .container{
     padding: 10px 10%;
+    width: 100%;
+    max-width: none; /* Or increase if needed */
+
 }
 
 nav{
@@ -66,8 +69,70 @@ nav ul li a:hover::after{
     width: 100%;
 }
 
+/*  
+
+//image carousel css code
+
+.header-main {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start; /* ensures top alignment 
+    margin-top: 10%;
+    width: 100%;
+    gap: 40px;
+    flex-wrap: wrap;
+  }
+  
+  .header-text {
+    font-size: 30px;
+  }
+  
+  .header-text h1 {
+    margin-top: 20px;
+    font-size: 60px;
+  }
+  
+  .header-text h1 span {
+    color: #1172f1;
+  }
+  
+  .carousel {
+    width: 45%;
+    height: auto;
+    aspect-ratio: 4 / 3;
+    overflow: hidden;
+    border-radius: 10px;
+    background-color: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .carousel-track {
+    display: flex;
+    animation: slide 40s infinite circular;
+  }
+  
+  .carousel-img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    flex-shrink: 0;
+  }
+  
+  @keyframes slide {
+    14.2857% { transform: translateX(0); }
+    28.571% { transform: translateX(-100%); }
+    42.8571% { transform: translateX(-200%); }
+    57.14% { transform: translateX(-300%); }
+    71.4% { transform: translateX(-200%); }
+    86% { transform: translateX(-100%); }
+    100% { transform: translateX(0); }
+  }
+  */
+
 .header-text{
-    margin-top: 20%;
+    margin-top: 10%;
     font-size: 30px;
 }
 
@@ -79,6 +144,7 @@ nav ul li a:hover::after{
 .header-text h1 span{
     color: #1172f1
 }
+
 
 /* about section */ 
 
@@ -147,9 +213,21 @@ nav ul li a:hover::after{
     margin: 10px 0;
 }
 
+#experience li span{
+    font-size: 15px;
+}
+#experience li{
+    font-size: 15px;
+}
+
 .tab-contents ul li span{
     color: #1172f1;
     font-size: 14px;
+    
+}
+
+#skills li span {
+  font-size: 14.5px;
 }
 
 .tab-contents{
@@ -343,9 +421,13 @@ nav .fa-solid{
 
 
 @media only screen and (max-width:600px){
+
     #header{
         /* change to phone background image later */
         background-image: url(images\ for\ website/tempbg.avif);
+    }
+    .carousel {
+        width: 80%;
     }
     .header-text{
         margin-top: 100%;

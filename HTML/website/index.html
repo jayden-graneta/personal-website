@@ -25,10 +25,24 @@
             
         </nav>
         <div>
-            <div class="header-text">
-                <p>CS Student</p>
-                <h1>Hi, My name is <br><span>Jayden Graneta</span>!!</h1>
-            </div>
+            <div class="header-main">
+                <div class="header-text">
+                  <p>CS Student</p>
+                  <h1>Hi, My name is <br><span>Jayden Graneta</span>!!</h1>
+                </div>
+                <!--  
+                //image carousel code 
+                //removed due to bugs and not looking the best overall going back and adding a single cover image bg instead overall cleaner
+                <div class="carousel">
+                  <div class="carousel-track">
+                    <img src="images for website/05trio.jpg" alt="Image 1" class="carousel-img">
+                    <img src="images for website/uxl.team.jpg" alt="Image 2" class="carousel-img">
+                    <img src="images for website/lfsa.team.jpg" alt="Image 3" class="carousel-img">
+                    <img src="images for website/jamiel.jayden.jpg" alt="Image 4" class="carousel-img">
+                  </div>
+                </div>
+                -->
+              </div> 
         </div>
     </div>
 </div>
@@ -51,21 +65,30 @@
                 </div>
                 <div class="tab-contents active-tab" id="skills">
                     <ul>
-                        <li><span>UI/UI</span><br> Programing and Designing Apps</li>
-                        <li><span>UI/UI</span><br> Programing and Designing Apps</li>
-                        <li><span>UI/UI</span><br> Programing and Designing Apps</li>
+                        <li><span><Strong> Programming Languages: </Strong></span><br>Python, Java, JavaScript, C, HTML, CSS, Arm Assembly</li>
+                        <li><span> <Strong>Design Tools(UX):</Strong></span><br>Figma, Sketch, Canva, Miro </li>
+                        <li><span><Strong> Software/Tools: </Strong></span><br>Git/Github, VS Code, Eclipse, Pycharm, Netlify</li>
+                        <li><span><strong>Libaries:</strong></span><br>
+                        Numpy</li>
                     </ul>
                 </div>
                 <div class="tab-contents" id="experience">
                     <ul>
-                        <li><span>Hour Of Code</span><br> Coding Instuctor</li>
+                        <li><span>Hour Of Code</span><span style="float: right; color: #ababab;" >2022–23</span><br> Coding Instuctor</li>
+                        <li><span>User Experience Laurier [UXL]</span><span style="float: right; color: #ababab;">2024-Present</span><br>Vice-President Of Events</li>
                     </ul>
                 </div>
                 <div class="tab-contents" id="education">
                     <ul>
                         <li><span>2027</span><br> 
-                            Wilfrid Laurier University <br>
-                            Honours Bachelor of Science - BSc | minor in UX Design, Computer Science</li>
+                            <strong>Wilfrid Laurier University</strong> <br>
+                            Honours Bachelor of Science[BSc] - Computer Science | minor in UX Design</li>
+                        <li><span>2027</span><br> 
+                            <strong>Wilfrid Laurier University</strong> <br>
+                            Minor in User Experince Design(UX)</li>
+                        <li><span>2025</span><br>
+                        <Strong>Government of Canada</Strong> <br>
+                        TCPS 2: CORE 2022 (Panel on Research Ethics)</li>
                     
                     </ul>
                 </div>
@@ -82,9 +105,9 @@
             <div class="work">
                 <img src="images for website/tempP.jpg">
                 <div class="layer">
-                    <h3>XYZ APP</h3>
-                    <p>desc of project</p>
-                    <a href="#"><i class="fa-solid fa-up-right-from-square"></i></a>
+                    <h3>Personal Website</h3>
+                    <p>Code for this website made using html, css and JS.</p>
+                    <a href="https://github.com/jayden-graneta/personal-website"><i class="fa-solid fa-up-right-from-square"></i></a>
                 </div>
             </div>
             <div class="work">
@@ -196,6 +219,7 @@
         .catch(error => console.error('Error!', error.message))
     })
   </script>
+
     
 </body>
 </html>
