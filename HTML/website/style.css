@@ -16,7 +16,7 @@ body{
     width: 100%;
     height: 100vh;
     /* background image section */
-    background-image: url(images\ for\ website/tempbg.avif);
+    background-image: url(images\ for\ website/bg.png);
     background-position: center;
     background-size: cover;
 
@@ -69,14 +69,14 @@ nav ul li a:hover::after{
     width: 100%;
 }
 
-/*  
 
-//image carousel css code
+
+
 
 .header-main {
     display: flex;
     justify-content: space-between;
-    align-items: flex-start; /* ensures top alignment 
+    align-items: flex-start; /* ensures top alignment  */
     margin-top: 10%;
     width: 100%;
     gap: 40px;
@@ -95,7 +95,8 @@ nav ul li a:hover::after{
   .header-text h1 span {
     color: #1172f1;
   }
-  
+/*  
+//image carousel css code
   .carousel {
     width: 45%;
     height: auto;
